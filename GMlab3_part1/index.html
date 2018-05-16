@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<title>Lab3_Part1</title>
+
+<body>
+  <div id="canvasDiv"></div>
+  <div>
+    <input type="radio" id="revolution" name="method">
+    <label>Surfaces of Revolution</label>
+
+    <input type="radio" id="extrution" name="method">
+    <label>Extrution</label>
+
+    <input type="radio" id="sweep" name="method">
+    <labe>Sweep Operators</label>
+  </div>
+  <div>
+    <input type="radio" name="curve" checked=true value="0">
+    <label>Bezier</label>
+    <input type="radio" name="curve" value="1">
+    <label>B-Spline</label>
+  </div>
+  <div id="options"></div>
+  <div class="">
+    <button id="draw">Draw</button>
+    <button id="drawClosed">Draw Closed</button>
+  </div>
+  <div class="">
+    <button type="button" id="checkPlanarity">Check Planarity</button>
+    <button id="output">Output</button>
+  </div>
+  <script src="three.js"></script>
+  <script src="canvas.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<title>Curve Generation</title>
+<body>
+
+  <canvas id="curveCanvas" width="1000" height="500"></canvas>
+  <form>
+	  <p>Please select generation technique:</p>
+	  <div>
+		<input type="radio" id="curve1"
+		 name="curve" value="bezier" checked=true class="curveChoice">
+		<label for="contactChoice1">Bezier Curve</label>
+
+		<input type="radio" id="curve2" name="curve" value="bSpline" class="curveChoice">
+		<label for="contactChoice2">Cubic B-Spine</label>
+
+		<input type="radio" id="curve3"
+		 name="curve" value="subBezier" class="curveChoice">
+		<label for="contactChoice3">Subdivision Bezier</label>
+
+		<input type="radio" id="curve4"
+		 name="curve" value="subBSpline" class="curveChoice">
+
+		<label for="contactChoice3">Subdivision Quadric B-spline</label>
+
+		<input type="radio" id="curve5"
+		 name="curve" value="rBezier" class="curveChoice">
+
+		<label for="contactChoice3">Rational Bezier</label>
+	  </div>
+  </form>
+  <form oninput="numDotsValue.value=numDots.value">
+	  <p>Please select the number of dots:</p>
+	  <div>
+		<input id="numDots" type="range" max='20' min='1' value='4' >
+		<output name="numDotsValue" for="numDots">4</output>
+		<button type="button" id="nbButton" disabled="true">Add new Bezier</button>
+		<button type="button" id="dupButton" disabled="true">Duplicate</button>
+	  </div>
+  </form>
+  <p>Input your weight for rational Bezier/NURBS here:</p>
+  <div id="weight">
+  </div>
+<script src="curveCanvas.js"></script>
+</body>
+</html>
